@@ -1,4 +1,7 @@
 #EXTM3U
+#EXTINF:0,Master List
+#EXTVLCOPT:network-caching=1000
+http://pharay.club:8080/get.php?username=TC93vVwh0T&password=rPHnHUFGYY&type=m3u_plus
 #EXTINF:0,Barbie: Skipper and the Big Babysitting Adventure (2023)
 #EXTVLCOPT:network-caching=1000
 http://pharay.club:8080/movie/TC93vVwh0T/rPHnHUFGYY/58250.mp4
