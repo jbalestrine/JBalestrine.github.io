@@ -1,6 +1,25 @@
 <!--  ********** Copyright 2016 Roku Corp.  All Rights Reserved. **********  -->
 <Content>
-<item title="Bip and Bop" description="Apple test stream" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76399.mp4"/>
+<item title="Big Bang Theory 1-1" description="Big Bang Theory 1-1" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76399.mp4"/>
+<item title="Big Bang Theory 1-2" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76400.mp4"/>
+<item title="Big Bang Theory 1-03" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76401.mp4"/>
+<item title="Big Bang Theory 1-04" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76402.mp4"/>
+<item title="Big Bang Theory 1-05" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76403.mp4"/>
+<item title="Big Bang Theory 1-06" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76404.mp4"/>
+<item title="Big Bang Theory 1-07" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76405.mp4"/>
+<item title="Big Bang Theory 1-08" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76406.mp4"/>
+<item title="Big Bang Theory 1-09" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76407.mp4"/>
+<item title="Big Bang Theory 1-10" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76408.mp4"/>
+<item title="Big Bang Theory 1-11" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76409.mp4"/>
+<item title="Big Bang Theory 1-12" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76410.mp4"/>
+<item title="Big Bang Theory 1-13" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76411.mp4"/>
+<item title="Big Bang Theory 1-14" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76412.mp4"/>
+<item title="Big Bang Theory 1-15" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76413.mp4"/>
+<item title="Big Bang Theory 1-16" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76414.mp4"/>
+<item title="Big Bang Theory 1-17" description="Big Bang Theory 1-2" hdposterurl="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png" streamformat="mp4" url="http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76415.mp4"/>
+
+
+
 <item title="Sintel the Movie" description="a short 15-minute fantasy film " hdposterurl="https://durian.blender.org/wp-content/uploads/2010/04/Sintel1.png" streamformat="mp4" url="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"/>
 <item title="The Biker" description="biker rides along the coast" hdposterurl="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Bicycle_with_Rider.svg/1182px-Bicycle_with_Rider.svg.png" streamformat="hls" url="https://content.jwplatform.com/manifests/yp34SRmf.m3u8"/>
 <item title="Parkour in Santorini, Greece" description="Hardcore Parkour!" hdposterurl="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Running_icon_-_Noun_Project_22889.svg/1024px-Running_icon_-_Noun_Project_22889.svg.png" streamformat="hls" url="https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"/>
