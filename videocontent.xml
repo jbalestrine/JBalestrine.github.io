@@ -52,8 +52,7 @@ https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg00327-coxmediagroup-kirobreaking-on
 <item title="Star Wars: Epi sode II - Attack of the Clones (2002)" description="Star Wars: Episode II - Attack of the Clones (2002)" hdposterurl="https://image.tmdb.org/t/p/w600_and_h900_bestv2/oZNPzxqM2s5DyVWab09NTQScDQt.jpg" streamformat="mp4" url="http://pharay.club:8080/movie/TC93vVwh0T/rPHnHUFGYY/74196.mp4"/>
 <item title="The Empire Strikes Back (1980)" description="The Empire Strikes Back (1980)" hdposterurl="https://image.tmdb.org/t/p/w600_and_h900_bestv2/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg" streamformat="mp4" url="http://pharay.club:8080/movie/TC93vVwh0T/rPHnHUFGYY/74197.mp4"/>
 
-
-<item title="-find" description="testx" hdposterurl="https://image.tmdb.org/t/p/w300/zJeQFHYYu8XHMk5JbWPXJ4Vgo7U.jpg" streamformat="hls" url="http://pharay.club:8080/get.php?username=TC93vVwh0T&password=rPHnHUFGYY&type=m3u_plus"/>
+<item title="-find m3u" description="testx" hdposterurl="https://image.tmdb.org/t/p/w300/zJeQFHYYu8XHMk5JbWPXJ4Vgo7U.jpg" streamformat="hls" url="https://jbalestrine.github.io/movies.m3u"/>
 <item title="-ep 020" description="testx" hdposterurl="https://image.tmdb.org/t/p/w300/zJeQFHYYu8XHMk5JbWPXJ4Vgo7U.jpg" streamformat="hls" url="http://pharay.club:8080/TC93vVwh0T/rPHnHUFGYY/75147"/>
 <item title="-ep 210" description="testx" hdposterurl="https://image.tmdb.org/t/p/w300/zJeQFHYYu8XHMk5JbWPXJ4Vgo7U.jpg" streamformat="hls" url="http://pharay.club:8080/TC93vVwh0T/rPHnHUFGYY/75148"/>
 <item title="-ep 202" description="testx" hdposterurl="https://image.tmdb.org/t/p/w300/zJeQFHYYu8XHMk5JbWPXJ4Vgo7U.jpg" streamformat="hls" url="http://pharay.club:8080/TC93vVwh0T/rPHnHUFGYY/75149"/>
