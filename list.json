@@ -86,9 +86,9 @@
       "thumbnail": "pkg:/images/movies/thehobbit1.png",
       "id": "shortform-4be9d883d51ca3161c780d261c3e1ef480e7e56d",
       "shortDescription": "The Hobbit",
-      "title": "Voice Features",
+      "title": "The Hobbit - Am Unexpected Journey",
       "content": {
-        "duration": 98,
+        "duration": 9500,
         "videos": [
           {
             "videoType": "MP4",
@@ -116,9 +116,9 @@
   "series": [
     {
       "id": "series_1_tips",
-      "title": "LORD OF THE RINGS",
+      "title": "Big Bang Theory",
       "releaseDate": "2020-03-15T02:01:00+02:00",
-      "shortDescription": "Lord of the rings",
+      "shortDescription": "Big Bang Theory",
       "thumbnail": "https://image.roku.com/ZHZscHItMTc2/tips-tricks.jpg",
       "genres": [
         "educational"
@@ -132,18 +132,18 @@
           "episodes": [
             {
               "id": "shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4",
-              "title": "How to listen to music",
+              "title": "Episode 1",
               "episodeNumber": 1,
               "content": {
                 "dateAdded": "2020-03-06T20:25:52Z",
                 "videos": [
                   {
-                    "videoType": "HLS",
-                    "url": "https://d1n7kckvd41xqg.cloudfront.net/61f6f859d30743378290300e99f2f53a/ac885a2fea4d4cbeafb279b33e8ba342/21b582aed3134cd4ad03dc646e04282d/index.m3u8",
+                    "videoType": "MP4",
+                    "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76399.mp4",
                     "quality": "HD"
                   }
                 ],
-                "duration": 187,
+                "duration": 1340,
                 "captions": [
                   {
                     "language": "en",
@@ -158,12 +158,12 @@
                 ],
                 "language": "en-us"
               },
-              "thumbnail": "https://d6hm6c1vbpfva.cloudfront.net/shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4_3/images/HowToListenToMusic.jpg",
-              "shortDescription": "Stream music on your Roku device",
+              "thumbnail": "pkg:/images/movies/bbt.png",
+              "shortDescription": "Episode 1",
               "releaseDate": "2020-01-02",
-              "longDescription": "Stream music on your Roku device",
+              "longDescription": "Big Bang Theory - Episode 1",
               "tags": [
-                "tips"
+                "BBT"
               ],
               "genres": [
                 "educational"
@@ -171,18 +171,18 @@
             },
             {
               "id": "shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9",
-              "title": "Best speaker placement",
+              "title": "Episode 2",
               "episodeNumber": 2,
               "content": {
                 "dateAdded": "2020-02-04T19:08:55Z",
                 "videos": [
                   {
-                    "videoType": "HLS",
-                    "url": "https://d1n7kckvd41xqg.cloudfront.net/62405a3b6d304bd180626636854f7acd/ac885a2fea4d4cbeafb279b33e8ba342/21b582aed3134cd4ad03dc646e04282d/index.m3u8",
+                    "videoType": "MP4",
+                    "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76400.mp4",
                     "quality": "HD"
                   }
                 ],
-                "duration": 134,
+                "duration": 1340,
                 "captions": [
                   {
                     "language": "en",
@@ -197,7 +197,7 @@
                 ],
                 "language": "en-us"
               },
-              "thumbnail": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/images/Best_Speaker_Placement.jpg",
+              "thumbnail": "pkg:/images/movies/bbt.png",
               "shortDescription": "Find the best placement of your Roku audio devices",
               "releaseDate": "2020-01-02",
               "longDescription": "Find the best placement of your Roku audio devices",
