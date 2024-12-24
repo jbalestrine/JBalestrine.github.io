@@ -31,7 +31,7 @@
     },
     {
       "longDescription": "Lord of the Rings - The Two Towers.",
-      "thumbnail": "ttps://64.media.tumblr.com/3783da3628129ab226a649bbc755a608/tumblr_n9z12ynbDg1r7twxno1_1280.jpg",
+      "thumbnail": "pkg:/images/movies/twotowers.png",
       "releaseDate": "2020-01-15",
       "genres": [
         "educational"
