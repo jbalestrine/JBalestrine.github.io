@@ -116,10 +116,10 @@
   "series": [
     {
       "id": "series_1_tips",
-      "title": "Big Bang Theory",
+      "title": "List of Series - All Unflitered",
       "releaseDate": "2020-03-15T02:01:00+02:00",
-      "shortDescription": "Big Bang Theory",
-      "thumbnail": "https://image.roku.com/ZHZscHItMTc2/tips-tricks.jpg",
+      "shortDescription": "Need to add network based series organized by provider -JB",
+      "thumbnail": "pkg:/images/movies/series.png",
       "genres": [
         "educational"
       ],
@@ -158,7 +158,7 @@
                 ],
                 "language": "en-us"
               },
-              "thumbnail": "pkg:/images/movies/bbt.png",
+              "thumbnail": "pkg:/images/movies/",
               "shortDescription": "Episode 1",
               "releaseDate": "2020-01-02",
               "longDescription": "Big Bang Theory - Episode 1",
