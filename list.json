@@ -295,6 +295,188 @@
         }
       ]
     },
+	"SeriesX": [
+    {
+      "id": "Seriesx",
+      "title": "List of Seriesx",
+      "releaseDate": "2021-03-15T02:01:00+02:00",
+      "shortDescription": "Need to add network based series organized by provider -JB",
+      "thumbnail": "pkg:/images/movies/series.png",
+      "genres": [
+        "educational"
+      ],
+      "tags": [
+        "seriesx"
+      ],
+      "seasons": [
+        {
+          "title": "Season 1",
+          "episodes": [
+            {
+              "id": "shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4x",
+              "title": "Episode 1",
+              "episodeNumber": 1,
+              "content": {
+                "dateAdded": "2020-03-06T20:25:52Z",
+                "videos": [
+                  {
+                    "videoType": "MP4",
+                    "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76399.mp4",
+                    "quality": "HD"
+                  }
+                ],
+                "duration": 1340,
+                "captions": [
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4_3/captions/HowToListenToMusic_cc_eng.srt"
+                  },
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4_3/captions/HowToListenToMusic_cc_eng.vtt"
+                  }
+                ],
+                "language": "en-us"
+              },
+              "thumbnail": "pkg:/images/movies/bbt.png",
+              "shortDescription": "Season 1 - Episode 1",
+              "releaseDate": "2020-01-02",
+              "longDescription": "Big Bang Theory - Episode 1",
+              "tags": [
+                "BBT"
+              ],
+              "genres": [
+                "educational"
+              ]
+            },
+            {
+              "id": "shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9x",
+              "title": "Episode 2",
+              "episodeNumber": 2,
+              "content": {
+                "dateAdded": "2020-02-04T19:08:55Z",
+                "videos": [
+                  {
+                    "videoType": "MP4",
+                    "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76400.mp4",
+                    "quality": "HD"
+                  }
+                ],
+                "duration": 1340,
+                "captions": [
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+                  },
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+                  }
+                ],
+                "language": "en-us"
+              },
+              "thumbnail": "pkg:/images/movies/bbt.png",
+              "shortDescription": "Season 1 - Episode 2",
+              "releaseDate": "2020-01-02",
+              "longDescription": "Big Bang Theory - Season 1",
+              "tags": [
+                "tips"
+              ],
+              "genres": [
+                "educational"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Season 2",
+          "episodes": [
+            {
+              "id": "shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5x",
+              "title": "Guest Mode",
+              "episodeNumber": 1,
+              "content": {
+                "dateAdded": "2020-01-29T02:32:18Z",
+                "videos": [
+                  {
+                    "videoType": "HLS",
+                    "url": "https://d1n7kckvd41xqg.cloudfront.net/aed3cf8c357f4ef8b8e267a30ac8f25a/ac885a2fea4d4cbeafb279b33e8ba342/21b582aed3134cd4ad03dc646e04282d/index.m3u8",
+                    "quality": "HD"
+                  }
+                ],
+                "duration": 15,
+                "captions": [
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5_1/captions/GUEST_MODE_cc_eng.srt"
+                  },
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5_1/captions/GUEST_MODE_cc_eng.vtt"
+                  }
+                ],
+                "language": "en-us"
+              },
+              "thumbnail": "https://d6hm6c1vbpfva.cloudfront.net/shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5_1/images/GUEST_MODE.jpg",
+              "shortDescription": "Let your guests stream with their own accounts",
+              "releaseDate": "2019-12-03",
+              "longDescription": "Let your guests stream with their own accounts",
+              "tags": [
+                "tips"
+              ],
+              "genres": [
+                "educational"
+              ]
+            },
+            {
+              "id": "shortform-6f2088297f82e02e74e07341fd404750b56e2fbbx",
+              "title": "Private Listening",
+              "episodeNumber": 2,
+              "content": {
+                "dateAdded": "2020-03-06T20:43:17Z",
+                "videos": [
+                  {
+                    "videoType": "HLS",
+                    "url": "https://d1n7kckvd41xqg.cloudfront.net/f137dd3848ba4bf3b70bb00b90b0eaf7/ac885a2fea4d4cbeafb279b33e8ba342/21b582aed3134cd4ad03dc646e04282d/index.m3u8",
+                    "quality": "HD"
+                  }
+                ],
+                "duration": 30,
+                "captions": [
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-6f2088297f82e02e74e07341fd404750b56e2fbb_2/captions/ROKU_PRIVATE_LISTENING_012219_cc_eng.srt"
+                  },
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-6f2088297f82e02e74e07341fd404750b56e2fbb_2/captions/ROKU_PRIVATE_LISTENING_012219_cc_eng.vtt"
+                  }
+                ],
+                "language": "en-us"
+              },
+              "thumbnail": "https://d6hm6c1vbpfva.cloudfront.net/shortform-6f2088297f82e02e74e07341fd404750b56e2fbb_2/images/ROKU_PRIVATE_LISTENING_012219.jpg",
+              "shortDescription": "See the benefits of the Private Listening",
+              "releaseDate": "2019-10-15",
+              "longDescription": "See the benefits of the Private Listening",
+              "tags": [
+                "tips"
+              ],
+              "genres": [
+                "educational"
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "series_2_RSG",
       "title": "SceneGraph Developers: Build a Channel",
@@ -704,188 +886,6 @@
       ]
     }
   ],
-    "SeriesX": [
-    {
-      "id": "Seriesx",
-      "title": "List of Seriesx",
-      "releaseDate": "2020-03-15T02:01:00+02:00",
-      "shortDescription": "Need to add network based series organized by provider -JB",
-      "thumbnail": "pkg:/images/movies/series.png",
-      "genres": [
-        "educational"
-      ],
-      "tags": [
-        "tips"
-      ],
-      "seasons": [
-        {
-          "title": "Season 1",
-          "episodes": [
-            {
-              "id": "shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4",
-              "title": "Episode 1",
-              "episodeNumber": 1,
-              "content": {
-                "dateAdded": "2020-03-06T20:25:52Z",
-                "videos": [
-                  {
-                    "videoType": "MP4",
-                    "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76399.mp4",
-                    "quality": "HD"
-                  }
-                ],
-                "duration": 1340,
-                "captions": [
-                  {
-                    "language": "en",
-                    "captionType": "CLOSED_CAPTION",
-                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4_3/captions/HowToListenToMusic_cc_eng.srt"
-                  },
-                  {
-                    "language": "en",
-                    "captionType": "CLOSED_CAPTION",
-                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4_3/captions/HowToListenToMusic_cc_eng.vtt"
-                  }
-                ],
-                "language": "en-us"
-              },
-              "thumbnail": "pkg:/images/movies/bbt.png",
-              "shortDescription": "Season 1 - Episode 1",
-              "releaseDate": "2020-01-02",
-              "longDescription": "Big Bang Theory - Episode 1",
-              "tags": [
-                "BBT"
-              ],
-              "genres": [
-                "educational"
-              ]
-            },
-            {
-              "id": "shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9",
-              "title": "Episode 2",
-              "episodeNumber": 2,
-              "content": {
-                "dateAdded": "2020-02-04T19:08:55Z",
-                "videos": [
-                  {
-                    "videoType": "MP4",
-                    "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/76400.mp4",
-                    "quality": "HD"
-                  }
-                ],
-                "duration": 1340,
-                "captions": [
-                  {
-                    "language": "en",
-                    "captionType": "CLOSED_CAPTION",
-                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
-                  },
-                  {
-                    "language": "en",
-                    "captionType": "CLOSED_CAPTION",
-                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
-                  }
-                ],
-                "language": "en-us"
-              },
-              "thumbnail": "pkg:/images/movies/bbt.png",
-              "shortDescription": "Season 1 - Episode 2",
-              "releaseDate": "2020-01-02",
-              "longDescription": "Big Bang Theory - Season 1",
-              "tags": [
-                "tips"
-              ],
-              "genres": [
-                "educational"
-              ]
-            }
-          ]
-        },
-        {
-          "title": "Season 2",
-          "episodes": [
-            {
-              "id": "shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5",
-              "title": "Guest Mode",
-              "episodeNumber": 1,
-              "content": {
-                "dateAdded": "2020-01-29T02:32:18Z",
-                "videos": [
-                  {
-                    "videoType": "HLS",
-                    "url": "https://d1n7kckvd41xqg.cloudfront.net/aed3cf8c357f4ef8b8e267a30ac8f25a/ac885a2fea4d4cbeafb279b33e8ba342/21b582aed3134cd4ad03dc646e04282d/index.m3u8",
-                    "quality": "HD"
-                  }
-                ],
-                "duration": 15,
-                "captions": [
-                  {
-                    "language": "en",
-                    "captionType": "CLOSED_CAPTION",
-                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5_1/captions/GUEST_MODE_cc_eng.srt"
-                  },
-                  {
-                    "language": "en",
-                    "captionType": "CLOSED_CAPTION",
-                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5_1/captions/GUEST_MODE_cc_eng.vtt"
-                  }
-                ],
-                "language": "en-us"
-              },
-              "thumbnail": "https://d6hm6c1vbpfva.cloudfront.net/shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5_1/images/GUEST_MODE.jpg",
-              "shortDescription": "Let your guests stream with their own accounts",
-              "releaseDate": "2019-12-03",
-              "longDescription": "Let your guests stream with their own accounts",
-              "tags": [
-                "tips"
-              ],
-              "genres": [
-                "educational"
-              ]
-            },
-            {
-              "id": "shortform-6f2088297f82e02e74e07341fd404750b56e2fbb",
-              "title": "Private Listening",
-              "episodeNumber": 2,
-              "content": {
-                "dateAdded": "2020-03-06T20:43:17Z",
-                "videos": [
-                  {
-                    "videoType": "HLS",
-                    "url": "https://d1n7kckvd41xqg.cloudfront.net/f137dd3848ba4bf3b70bb00b90b0eaf7/ac885a2fea4d4cbeafb279b33e8ba342/21b582aed3134cd4ad03dc646e04282d/index.m3u8",
-                    "quality": "HD"
-                  }
-                ],
-                "duration": 30,
-                "captions": [
-                  {
-                    "language": "en",
-                    "captionType": "CLOSED_CAPTION",
-                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-6f2088297f82e02e74e07341fd404750b56e2fbb_2/captions/ROKU_PRIVATE_LISTENING_012219_cc_eng.srt"
-                  },
-                  {
-                    "language": "en",
-                    "captionType": "CLOSED_CAPTION",
-                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-6f2088297f82e02e74e07341fd404750b56e2fbb_2/captions/ROKU_PRIVATE_LISTENING_012219_cc_eng.vtt"
-                  }
-                ],
-                "language": "en-us"
-              },
-              "thumbnail": "https://d6hm6c1vbpfva.cloudfront.net/shortform-6f2088297f82e02e74e07341fd404750b56e2fbb_2/images/ROKU_PRIVATE_LISTENING_012219.jpg",
-              "shortDescription": "See the benefits of the Private Listening",
-              "releaseDate": "2019-10-15",
-              "longDescription": "See the benefits of the Private Listening",
-              "tags": [
-                "tips"
-              ],
-              "genres": [
-                "educational"
-              ]
-            }
-          ]
-        }
-      ]
-    },
   "movies": [
     {
       "longDescription": "This video demonstrates the Roku Remote Debugger, and it shows how the BrightScript network debug protocol could be used in an integration with an IDE such as Visual Studio Code.",
