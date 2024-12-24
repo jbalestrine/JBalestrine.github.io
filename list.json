@@ -113,12 +113,12 @@
       }
     }
   ],
-    "Series": [
+  "series": [
     {
       "id": "series_1_tips",
-      "title": "Two and a half men",
+      "title": "List of Series - All Unflitered",
       "releaseDate": "2020-03-15T02:01:00+02:00",
-      "shortDescription": "Two and a Half men -JB",
+      "shortDescription": "Need to add network based series organized by provider -JB",
       "thumbnail": "pkg:/images/movies/series.png",
       "genres": [
         "educational"
