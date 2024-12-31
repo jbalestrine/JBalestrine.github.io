@@ -828,7 +828,7 @@
 					"duration": 431,
 					"language": "en-us"
 				  },
-				  "thumbnail": "",
+				  "thumbnail": "pkg:/images/movies/foxnews.png",
 				  "shortDescription": "FOX",
 				  "releaseDate": "2020-05-07",
 				  "longDescription": "USA FOX NEWS",
