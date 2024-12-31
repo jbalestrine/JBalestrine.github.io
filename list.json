@@ -1336,7 +1336,6 @@
       "language": "en-us",
       "dateAdded": "2024-12-25T00:00:00Z"
     },
-  }
 		{
 		  "longDescription": "Video that demonstrates the Roku automated channel testing software. It provides a brief overview of the technology stack, and it shows how both the Roku WebDriver and Robot Framework Library can be used for state-driven channel UI automation testing.",
 		  "thumbnail": "https://d6hm6c1vbpfva.cloudfront.net/shortform-4374be10035077242dde8b7fe272e509ad6e563a_1/images/basicTestReport.jpg",
