@@ -771,7 +771,7 @@
 		
 		{
 		  "id": "series_2_RSG",
-		  "title": "SceneGraph Developers: Build a Channel",
+		  "title": "Local TV - Seattle",
 		  "releaseDate": "2020-03-15T02:01:00+02:00",
 		  "shortDescription": "The \"SceneGraph Developers: Build a Channel\" course teaches novice Roku developers how to develop a channel from the ground up with the Roku SDK. This course walks developers through each step in building a basic, high-performance Roku channel that passes certification. This course is ideal for developers that are new to the Roku platform and want a simple, streamlined path for quickly understanding Roku development.",
 		  "thumbnail": "https://image.roku.com/ZHZscHItMTc2/rsg-build-channel-series.jpg",
@@ -783,28 +783,28 @@
 		  ],
 		  "seasons": [
 			{
-			  "title": "Season 1",
+			  "title": "News",
 			  "episodes": [
 				{
-				  "id": "rsg_unit1_intro",
-				  "title": "Introduction to the course",
+				  "id": "rsg_usaNBC",
+				  "title": "USA: CNBC",
 				  "episodeNumber": 1,
 				  "content": {
 					"dateAdded": "2020-05-07T02:32:24Z",
 					"videos": [
 					  {
-						"videoType": "MP4",
-						"url": "https://image.roku.com/ZHZscHItMTc2/rsg-unit1-intro-v3.mp4",
+						"videoType": "HLS",
+						"url": "http://pharay.club:8080/TC93vVwh0T/rPHnHUFGYY/23376",
 						"quality": "HD"
 					  }
 					],
 					"duration": 178,
 					"language": "en-us"
 				  },
-				  "thumbnail": "https://image.roku.com/ZHZscHItMTc2/video1-intro-course-v2.png",
-				  "shortDescription": "Watch the introduction to the \"SceneGraph: Build a Channel\" development course. This video outlines the course syllabus.",
+				  "thumbnail": "pkg:/images/movies/cnbc.png",
+				  "shortDescription": "CNBC NEWS",
 				  "releaseDate": "2020-05-07",
-				  "longDescription": "Watch the introduction to the \"SceneGraph: Build a Channel\" development course. This video outlines the course syllabus.",
+				  "longDescription": "CNBC NEWS",
 				  "tags": [
 					"RSG"
 				  ],
@@ -813,25 +813,25 @@
 				  ]
 				},
 				{
-				  "id": "rsg-unit2-developerSetup",
-				  "title": "Development setup",
+				  "id": "rsg-USAFOXNEWS",
+				  "title": "USA: Fox News",
 				  "episodeNumber": 2,
 				  "content": {
 					"dateAdded": "2020-05-07T02:32:24Z",
 					"videos": [
 					  {
-						"videoType": "MP4",
-						"url": "https://image.roku.com/ZHZscHItMTc2/rsg-unit2-developerSetup-v4.mp4",
+						"videoType": "HLS",
+						"url": "http://pharay.club:8080/TC93vVwh0T/rPHnHUFGYY/23340",
 						"quality": "HD"
 					  }
 					],
 					"duration": 431,
 					"language": "en-us"
 				  },
-				  "thumbnail": "https://image.roku.com/ZHZscHItMTc2/rsg-unit2-developerSetup-v4.png",
-				  "shortDescription": "Start developing for the Roku platform. This lesson explains the first steps.",
+				  "thumbnail": "",
+				  "shortDescription": "FOX",
 				  "releaseDate": "2020-05-07",
-				  "longDescription": "Start developing for the Roku platform. This lesson explains the first steps, which includes creating the required user and developer accounts and enabling your test Roku device for development. Once you're done, you can sideload Roku's Hello World channel and view its output in the debug console.",
+				  "longDescription": "USA FOX NEWS",
 				  "tags": [
 					"RSG"
 				  ],
