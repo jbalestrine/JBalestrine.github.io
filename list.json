@@ -82,154 +82,24 @@
 		  }
 		},
 		{
-		  "longDescription": "Series - Against the ropes",
-		  "thumbnail": "pkg:/images/movies/returnofking.png",
-		  "releaseDate": "2020-01-17",
+		  "longDescription": "X-Men - 2000",
+		  "thumbnail": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bRDAc4GogyS9ci3ow7UnInOcriN.jpg",
+		  "releaseDate": "2000-01-17",
 		  "genres": [
 			"educational"
 		  ],
 		  "tags": [
 			"getting-started"
 		  ],
-		  "id": "shortform-series1",
-		  "shortDescription": "x",
-		  "title": "Series - Against the ropes",
+		  "id": "Xmen-2000",
+		  "shortDescription": "2000",
+		  "title": "",
 		  "content": {
 			"duration": 9000,
 			"videos": [
 			  {
 				"videoType": "MP4",
-				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51072.mp4",
-				"quality": "HD"
-			  }
-			],
-			"language": "en-us",
-			"dateAdded": "2020-01-29T02:39:11Z"
-		  }
-		},
-		{
-		  "longDescription": "Series - Against the ropers",
-		  "thumbnail": "pkg:/images/movies/returnofking.png",
-		  "releaseDate": "2020-01-17",
-		  "genres": [
-			"educational"
-		  ],
-		  "tags": [
-			"getting-started"
-		  ],
-		  "id": "shortform-series2",
-		  "shortDescription": "x",
-		  "title": "Series - Against the ropes",
-		  "content": {
-			"duration": 9000,
-			"videos": [
-			  {
-				"videoType": "MP4",
-				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51073.mp4",
-				"quality": "HD"
-			  }
-			],
-			"language": "en-us",
-			"dateAdded": "2020-01-29T02:39:11Z"
-		  }
-		},
-		{
-		  "longDescription": "Series - Against the ropers",
-		  "thumbnail": "pkg:/images/movies/returnofking.png",
-		  "releaseDate": "2020-01-17",
-		  "genres": [
-			"educational"
-		  ],
-		  "tags": [
-			"getting-started"
-		  ],
-		  "id": "shortform-series3",
-		  "shortDescription": "x",
-		  "title": "Series - Against the ropes",
-		  "content": {
-			"duration": 9000,
-			"videos": [
-			  {
-				"videoType": "MP4",
-				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51074.mp4",
-				"quality": "HD"
-			  }
-			],
-			"language": "en-us",
-			"dateAdded": "2020-01-29T02:39:11Z"
-		  }
-		},
-		{
-		  "longDescription": "Series - Against the ropers",
-		  "thumbnail": "pkg:/images/movies/returnofking.png",
-		  "releaseDate": "2020-01-17",
-		  "genres": [
-			"educational"
-		  ],
-		  "tags": [
-			"getting-started"
-		  ],
-		  "id": "shortform-series4",
-		  "shortDescription": "x",
-		  "title": "Series - Against the ropes",
-		  "content": {
-			"duration": 9000,
-			"videos": [
-			  {
-				"videoType": "MP4",
-				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51075.mp4",
-				"quality": "HD"
-			  }
-			],
-			"language": "en-us",
-			"dateAdded": "2020-01-29T02:39:11Z"
-		  }
-		},
-		{
-		  "longDescription": "Series - Against the ropers",
-		  "thumbnail": "pkg:/images/movies/returnofking.png",
-		  "releaseDate": "2020-01-17",
-		  "genres": [
-			"educational"
-		  ],
-		  "tags": [
-			"getting-started"
-		  ],
-		  "id": "shortform-series5",
-		  "shortDescription": "x",
-		  "title": "Series - Against the ropes",
-		  "content": {
-			"duration": 9000,
-			"videos": [
-			  {
-				"videoType": "MP4",
-				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51076.mp4",
-				"quality": "HD"
-			  }
-			],
-			"language": "en-us",
-			"dateAdded": "2020-01-29T02:39:11Z"
-		  }
-		},
-		{
-		  "longDescription": "Series - Against the ropers",
-		  "thumbnail": "pkg:/images/movies/returnofking.png",
-		  "releaseDate": "2020-01-17",
-		  "genres": [
-			"educational"
-		  ],
-		  "tags": [
-			"getting-started"
-		  ],
-		  "id": "shortform-series6",
-		  "shortDescription": "x",
-		  "title": "Series - Against the ropes",
-		  "content": {
-			"duration": 9000,
-			"videos": [
-			  {
-				"videoType": "MP4",
-				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51077.mp4",
+				"url": "http://pharay.club:8080/movie/TC93vVwh0T/rPHnHUFGYY/48941.mp4",
 				"quality": "HD"
 			  }
 			],
@@ -451,6 +321,228 @@
 			}
 		  ]
 		},
+		{
+      "id": "XmenMovies",
+      "title": "X-Men Movies",
+      "releaseDate": "2000-03-15T02:01:00+02:00",
+      "shortDescription": "All Xmen Movies",
+      "thumbnail": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bRDAc4GogyS9ci3ow7UnInOcriN.jpg",
+      "genres": [
+        "educational"
+      ],
+      "tags": [
+        "tips"
+      ],
+      "seasons": [
+        {
+          "title": "Xmen Movies",
+          "episodes": [
+            {
+              "id": "Xmen-2000movie",
+              "title": "X-Men 2000",
+              "episodeNumber": 1,
+              "content": {
+                "dateAdded": "2020-03-06T20:25:52Z",
+                "videos": [
+                  {
+                    "videoType": "MP4",
+                    "url": "http://pharay.club:8080/movie/TC93vVwh0T/rPHnHUFGYY/48942.mp4",
+                    "quality": "HD"
+                  }
+                ],
+                "duration": 1340,
+                "captions": [
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4_3/captions/HowToListenToMusic_cc_eng.srt"
+                  },
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-2f0155ecdcc96789596c0fc77f06b45ca0df15a4_3/captions/HowToListenToMusic_cc_eng.vtt"
+                  }
+                ],
+                "language": "en-us"
+              },
+              "thumbnail": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bRDAc4GogyS9ci3ow7UnInOcriN.jpg",
+              "shortDescription": "First Release",
+              "releaseDate": "2002-01-02",
+              "longDescription": "X-Men 2000",
+              "tags": [
+                "BBT"
+              ],
+              "genres": [
+                "educational"
+              ]
+            },
+            {
+              "id": "X-MenFirstClass",
+              "title": "X-Men - X2",
+              "episodeNumber": 2,
+              "content": {
+                "dateAdded": "2020-02-04T19:08:55Z",
+                "videos": [
+                  {
+                    "videoType": "MP4",
+                    "url": "http://pharay.club:8080/movie/TC93vVwh0T/rPHnHUFGYY/48940.mp4",
+                    "quality": "HD"
+                  }
+                ],
+                "duration": 1340,
+                "captions": [
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+                  },
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+                  }
+                ],
+                "language": "en-us"
+              },
+              "thumbnail": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/pwQo1ehiPBqAbiVqD6rfNM8GCFE.jpg",
+              "shortDescription": "X2",
+              "releaseDate": "2020-01-02",
+              "longDescription": "X-Men X2",
+              "tags": [
+                "tips"
+              ],
+              "genres": [
+                "educational"
+              ]
+            }
+          ]
+        },
+		{
+              "id": "X-MenThelaststand",
+              "title": "X-Men - The Last Stand",
+              "episodeNumber": 3,
+              "content": {
+                "dateAdded": "2020-02-04T19:08:55Z",
+                "videos": [
+                  {
+                    "videoType": "MP4",
+                    "url": "http://pharay.club:8080/movie/TC93vVwh0T/rPHnHUFGYY/48941.mp4",
+                    "quality": "HD"
+                  }
+                ],
+                "duration": 1340,
+                "captions": [
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+                  },
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+                  }
+                ],
+                "language": "en-us"
+              },
+              "thumbnail": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sNSvwqiNXjEvDSeQFsJAGPEP7Gl.jpg",
+              "shortDescription": "The Last Stand",
+              "releaseDate": "2006-01-02",
+              "longDescription": "X-Men 2006",
+              "tags": [
+                "tips"
+              ],
+              "genres": [
+                "educational"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Season 2",
+          "episodes": [
+            {
+              "id": "shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5",
+              "title": "Guest Mode",
+              "episodeNumber": 1,
+              "content": {
+                "dateAdded": "2020-01-29T02:32:18Z",
+                "videos": [
+                  {
+                    "videoType": "HLS",
+                    "url": "https://d1n7kckvd41xqg.cloudfront.net/aed3cf8c357f4ef8b8e267a30ac8f25a/ac885a2fea4d4cbeafb279b33e8ba342/21b582aed3134cd4ad03dc646e04282d/index.m3u8",
+                    "quality": "HD"
+                  }
+                ],
+                "duration": 15,
+                "captions": [
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5_1/captions/GUEST_MODE_cc_eng.srt"
+                  },
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5_1/captions/GUEST_MODE_cc_eng.vtt"
+                  }
+                ],
+                "language": "en-us"
+              },
+              "thumbnail": "https://d6hm6c1vbpfva.cloudfront.net/shortform-cb6dc73fb84bf7f0d35b99b83217f2dbc9bc08d5_1/images/GUEST_MODE.jpg",
+              "shortDescription": "Let your guests stream with their own accounts",
+              "releaseDate": "2019-12-03",
+              "longDescription": "Let your guests stream with their own accounts",
+              "tags": [
+                "tips"
+              ],
+              "genres": [
+                "educational"
+              ]
+            },
+            {
+              "id": "shortform-6f2088297f82e02e74e07341fd404750b56e2fbb",
+              "title": "Private Listening",
+              "episodeNumber": 2,
+              "content": {
+                "dateAdded": "2020-03-06T20:43:17Z",
+                "videos": [
+                  {
+                    "videoType": "HLS",
+                    "url": "https://d1n7kckvd41xqg.cloudfront.net/f137dd3848ba4bf3b70bb00b90b0eaf7/ac885a2fea4d4cbeafb279b33e8ba342/21b582aed3134cd4ad03dc646e04282d/index.m3u8",
+                    "quality": "HD"
+                  }
+                ],
+                "duration": 30,
+                "captions": [
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-6f2088297f82e02e74e07341fd404750b56e2fbb_2/captions/ROKU_PRIVATE_LISTENING_012219_cc_eng.srt"
+                  },
+                  {
+                    "language": "en",
+                    "captionType": "CLOSED_CAPTION",
+                    "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-6f2088297f82e02e74e07341fd404750b56e2fbb_2/captions/ROKU_PRIVATE_LISTENING_012219_cc_eng.vtt"
+                  }
+                ],
+                "language": "en-us"
+              },
+              "thumbnail": "https://d6hm6c1vbpfva.cloudfront.net/shortform-6f2088297f82e02e74e07341fd404750b56e2fbb_2/images/ROKU_PRIVATE_LISTENING_012219.jpg",
+              "shortDescription": "See the benefits of the Private Listening",
+              "releaseDate": "2019-10-15",
+              "longDescription": "See the benefits of the Private Listening",
+              "tags": [
+                "tips"
+              ],
+              "genres": [
+                "educational"
+              ]
+            }
+          ]
+        }
+      ]
+    },
 		{
 		  "id": "series2",
 		  "title": "Lord of the Rings",
