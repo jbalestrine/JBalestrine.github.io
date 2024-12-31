@@ -82,7 +82,7 @@
 		  }
 		},
 		{
-		  "longDescription": "LOTR2 - RETURN OF THE KING",
+		  "longDescription": Series - Against the ropes",
 		  "thumbnail": "pkg:/images/movies/returnofking.png",
 		  "releaseDate": "2020-01-17",
 		  "genres": [
@@ -91,15 +91,145 @@
 		  "tags": [
 			"getting-started"
 		  ],
-		  "id": "shortform-a893e770b636f6459dcf027fe361cd49d7ac44c2x",
-		  "shortDescription": "LOTRx - Return of the King",
-		  "title": "Lord of the Rings - Return Of the King",
+		  "id": "shortform-series1",
+		  "shortDescription": "",
+		  "title": "Series - Against the ropes",
 		  "content": {
 			"duration": 9000,
 			"videos": [
 			  {
 				"videoType": "MP4",
-				"url": "http://pharay.club:8080/movie/TC93vVwh0T/rPHnHUFGYY/39208.mp4",
+				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51072.mp4",
+				"quality": "HD"
+			  }
+			],
+			"language": "en-us",
+			"dateAdded": "2020-01-29T02:39:11Z"
+		  }
+		},
+		{
+		  "longDescription": "Series - Against the ropers",
+		  "thumbnail": "pkg:/images/movies/returnofking.png",
+		  "releaseDate": "2020-01-17",
+		  "genres": [
+			"educational"
+		  ],
+		  "tags": [
+			"getting-started"
+		  ],
+		  "id": "shortform-series2",
+		  "shortDescription": "",
+		  "title": "Series - Against the ropes",
+		  "content": {
+			"duration": 9000,
+			"videos": [
+			  {
+				"videoType": "MP4",
+				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51073.mp4",
+				"quality": "HD"
+			  }
+			],
+			"language": "en-us",
+			"dateAdded": "2020-01-29T02:39:11Z"
+		  }
+		},
+		{
+		  "longDescription": "Series - Against the ropers",
+		  "thumbnail": "pkg:/images/movies/returnofking.png",
+		  "releaseDate": "2020-01-17",
+		  "genres": [
+			"educational"
+		  ],
+		  "tags": [
+			"getting-started"
+		  ],
+		  "id": "shortform-series3",
+		  "shortDescription": "",
+		  "title": "Series - Against the ropes",
+		  "content": {
+			"duration": 9000,
+			"videos": [
+			  {
+				"videoType": "MP4",
+				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51074.mp4",
+				"quality": "HD"
+			  }
+			],
+			"language": "en-us",
+			"dateAdded": "2020-01-29T02:39:11Z"
+		  }
+		},
+				{
+		  "longDescription": "Series - Against the ropers",
+		  "thumbnail": "pkg:/images/movies/returnofking.png",
+		  "releaseDate": "2020-01-17",
+		  "genres": [
+			"educational"
+		  ],
+		  "tags": [
+			"getting-started"
+		  ],
+		  "id": "shortform-series4",
+		  "shortDescription": "",
+		  "title": "Series - Against the ropes",
+		  "content": {
+			"duration": 9000,
+			"videos": [
+			  {
+				"videoType": "MP4",
+				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51075.mp4",
+				"quality": "HD"
+			  }
+			],
+			"language": "en-us",
+			"dateAdded": "2020-01-29T02:39:11Z"
+		  }
+		},
+		{
+		  "longDescription": "Series - Against the ropers",
+		  "thumbnail": "pkg:/images/movies/returnofking.png",
+		  "releaseDate": "2020-01-17",
+		  "genres": [
+			"educational"
+		  ],
+		  "tags": [
+			"getting-started"
+		  ],
+		  "id": "shortform-series5",
+		  "shortDescription": "",
+		  "title": "Series - Against the ropes",
+		  "content": {
+			"duration": 9000,
+			"videos": [
+			  {
+				"videoType": "MP4",
+				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51076.mp4",
+				"quality": "HD"
+			  }
+			],
+			"language": "en-us",
+			"dateAdded": "2020-01-29T02:39:11Z"
+		  }
+		},
+				{
+		  "longDescription": "Series - Against the ropers",
+		  "thumbnail": "pkg:/images/movies/returnofking.png",
+		  "releaseDate": "2020-01-17",
+		  "genres": [
+			"educational"
+		  ],
+		  "tags": [
+			"getting-started"
+		  ],
+		  "id": "shortform-series6",
+		  "shortDescription": "",
+		  "title": "Series - Against the ropes",
+		  "content": {
+			"duration": 9000,
+			"videos": [
+			  {
+				"videoType": "MP4",
+				"url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51077.mp4",
 				"quality": "HD"
 			  }
 			],
