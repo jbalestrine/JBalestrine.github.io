@@ -139,7 +139,7 @@
 		  }
 		}
 	  ],
-	  "series": [
+	  "Series and Grouped Movies": [
 		{
 		  "id": "series_1_tips",
 		  "title": "Big Bang Theory",
@@ -588,7 +588,7 @@
 					],
 					"language": "en-us"
 				  },
-				  "thumbnail": "https://image.tmdb.org/t/p/w300/15UCiKw7ujYq0W7nQ4u06l6oENn.jpg",
+				  "thumbnail": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/bRDAc4GogyS9ci3ow7UnInOcriN.jpg",
 				  "shortDescription": "First movie",
 				  "releaseDate": "2020-01-02",
 				  "longDescription": "Xmen 2000",
