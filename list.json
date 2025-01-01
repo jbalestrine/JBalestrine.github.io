@@ -499,6 +499,396 @@
 				  ]
 				},
 				{
+    "id": "ep1",
+    "title": "Episode 1",
+    "episodeNumber": 1,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.540303Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/75443.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 1",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+  {
+    "id": "ep2",
+    "title": "Episode 2",
+    "episodeNumber": 2,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.541302Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51072.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 2",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+  {
+    "id": "ep3",
+    "title": "Episode 3",
+    "episodeNumber": 3,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.541302Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51073.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 3",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+  {
+    "id": "ep4",
+    "title": "Episode 4",
+    "episodeNumber": 4,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.541302Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51074.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 4",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+  {
+    "id": "ep5",
+    "title": "Episode 5",
+    "episodeNumber": 5,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.541302Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51075.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 5",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+  {
+    "id": "ep6",
+    "title": "Episode 6",
+    "episodeNumber": 6,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.541302Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51076.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 6",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+  {
+    "id": "ep7",
+    "title": "Episode 7",
+    "episodeNumber": 7,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.541302Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51077.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 7",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+  {
+    "id": "ep8",
+    "title": "Episode 8",
+    "episodeNumber": 8,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.541302Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51078.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 8",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+  {
+    "id": "ep9",
+    "title": "Episode 9",
+    "episodeNumber": 9,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.541302Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51079.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 9",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+  {
+    "id": "ep10",
+    "title": "Episode 10",
+    "episodeNumber": 10,
+    "content": {
+      "dateAdded": "2025-01-01T04:27:51.541302Z",
+      "videos": [
+        {
+          "videoType": "MP4",
+          "url": "http://pharay.club:8080/series/TC93vVwh0T/rPHnHUFGYY/51080.mp4",
+          "quality": "HD"
+        }
+      ],
+      "duration": 1340,
+      "captions": [
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.srt"
+        },
+        {
+          "language": "en",
+          "captionType": "CLOSED_CAPTION",
+          "url": "https://d6hm6c1vbpfva.cloudfront.net/shortform-dc61d89665cf8a5c363925e7fcb4e382fa90f1f9_3/captions/Best_Speaker_Placement_cc_eng.vtt"
+        }
+      ],
+      "language": "en-us"
+    },
+    "thumbnail": null,
+    "shortDescription": "Season 1 - Episode 10",
+    "releaseDate": "2020-01-02",
+    "longDescription": "Unknown",
+    "tags": [
+      "tips"
+    ],
+    "genres": [
+      "educational"
+    ]
+  },
+				{
 				  "id": "seas2ep2",
 				  "title": "Private Listening",
 				  "episodeNumber": 2,
