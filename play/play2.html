@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Channel Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .alphabetical-filter {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .alphabetical-filter a {
+            margin: 5px;
+            padding: 10px;
+            background-color: #ddd;
+            text-decoration: none;
+            border-radius: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .alphabetical-filter a:hover {
+            background-color: #bbb;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .category {
+            width: 48%;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .category h2 {
+            margin-top: 0;
+        }
+
+        .channel-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .channel-item {
+            background-color: #fafafa;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .channel-item:hover {
+            background-color: #ececec;
+        }
+
+        .search-bar {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .category-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            font-size: 18px;
+        }
+
+        .category-list li {
+            margin: 10px 0;
+            cursor: pointer;
+            padding: 5px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .category-list li:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Fixed Video Player Styling */
+        .video-player {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 640px;
+            height: 360px;
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 1000;
+            display: none;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+        }
+
+        /* Adjust the content around the fixed video player */
+        .container {
+            margin-right: 660px;
+        }
+
+        /* Favorites Section */
+        #favoritesSection {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        #favoritesSection h2 {
+            margin-top: 0;
+        }
+
+        .favorites-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .favorites-item {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #eef;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .favorites-item:hover {
+            background-color: #dde;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>IPTV Channel Listings</h1>
+    <input type="text" id="searchBar" class="search-bar" placeholder="Search IPTV Channels..." onkeyup="searchChannels()">
+</header>
+
+<!-- Favorites Section -->
+<div id="favoritesSection">
+    <h2>Favorites</h2>
+    <ul id="favoritesList" class="favorites-list">
+        <!-- Favorite channels will be dynamically listed here -->
+    </ul>
+</div>
+
+<!-- Alphabetical Filter -->
+<div class="alphabetical-filter" id="alphabeticalFilter">
+    <!-- Alphabet letters will be dynamically added here -->
+</div>
+
+<div class="container">
+    <!-- Category List -->
+    <div id="categoryList" class="category-list">
+        <!-- Categories will be dynamically loaded here -->
+    </div>
+
+    <!-- Channel List -->
+    <div id="channelList" class="category">
+        <h2>All Channels</h2>
+        <ul id="channelItems" class="channel-list">
+            <!-- Channel list will be populated here dynamically -->
+        </ul>
+    </div>
+</div>
+
+<!-- Fixed Video Player -->
+<div class="video-player" id="videoPlayerContainer">
+    <video id="videoPlayer" controls>
+        <source id="videoSource" src="" type="application/x-mpegURL">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    let categories = {}; // To store channels organized by categories
+    let allChannels = []; // To store all channels for alphabetical filtering
+    let favorites = []; // To store favorite channels
+
+    // Function to load XSPF file using XMLHttpRequest
+    function loadXSPF() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'newjb.xspf', true); // Replace with your actual XSPF file path
+        xhr.setRequestHeader('Content-Type', 'application/xml');
+        
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const xmlData = xhr.responseText;
+                renderCategories(xmlData); // Parse and render categories and channels
+            } else {
+                console.error('Failed to load XSPF file');
+            }
+        };
+
+        xhr.onerror = function () {
+            console.error('Error occurred while fetching XSPF file');
+        };
+
+        xhr.send();
+    }
+
+    // Function to parse the XSPF file and render categories and channels
+    function renderCategories(xmlData) {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(xmlData, 'application/xml');
+        const trackList = xmlDoc.getElementsByTagName('track');
+        
+        categories = {};  // Reset categories for new data
+        allChannels = [];  // Reset all channels for alphabetical filter
+
+        // Parse the XSPF and organize channels by category and collect all channels
+        for (let i = 0; i < trackList.length; i++) {
+            const track = trackList[i];
+
+            const title = track.getElementsByTagName('title')[0] ? track.getElementsByTagName('title')[0].textContent : "Untitled";
+            const location = track.getElementsByTagName('location')[0] ? track.getElementsByTagName('location')[0].textContent : "No Location";
+            const creator = track.getElementsByTagName('creator')[0] ? track.getElementsByTagName('creator')[0].textContent : "Unknown Creator";
+            const description = track.getElementsByTagName('annotation')[0] ? track.getElementsByTagName('annotation')[0].textContent : "No Description";
+
+            // Organize tracks by category (creator)
+            if (!categories[creator]) {
+                categories[creator] = [];
+            }
+
+            categories[creator].push({ title, location, description });
+            allChannels.push({ title, location, description });
+        }
+
+        // Render categories list
+        const categoryListElement = document.getElementById('categoryList');
+        categoryListElement.innerHTML = ''; // Clear previous categories
+
+        for (const category in categories) {
+            const categoryItem = document.createElement('li');
+            categoryItem.textContent = category;
+            categoryItem.onclick = () => loadChannels(category);
+            categoryListElement.appendChild(categoryItem);
+        }
+
+        // Render the Alphabetical Filter
+        renderAlphabeticalFilter();
+        
+        // Load default category (first category)
+        loadChannels(Object.keys(categories)[0]);
+    }
+
+    // Function to render the alphabetical filter (A-Z)
+    function renderAlphabeticalFilter() {
+        const alphabeticalFilterElement = document.getElementById('alphabeticalFilter');
+        alphabeticalFilterElement.innerHTML = ''; // Clear previous filter
+
+        const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        letters.forEach(letter => {
+            const letterLink = document.createElement('a');
+            letterLink.href = '#';
+            letterLink.textContent = letter;
+            letterLink.onclick = () => filterByLetter(letter);
+            alphabeticalFilterElement.appendChild(letterLink);
+        });
+    }
+
+    // Function to filter channels by the selected letter and display them under "All Channels"
+    function filterByLetter(letter) {
+        const filteredChannels = allChannels.filter(channel => {
+            return channel.title && channel.title[0].toUpperCase() === letter;
+        });
+
+        // Display the filtered channels in the "All Channels" section
+        const channelListElement = document.getElementById('channelItems');
+        channelListElement.innerHTML = ''; // Clear previous list
+        filteredChannels.forEach(channel => {
+            const channelItem = document.createElement('li');
+            channelItem.className = 'channel-item';
+            channelItem.innerHTML = `<strong>${channel.title}</strong><br><em>${channel.description}</em>`;
+            channelItem.onclick = () => playChannel(channel.location);
+            channelItem.appendChild(createFavoriteButton(channel)); // Add favorite button
+            channelListElement.appendChild(channelItem);
+        });
+    }
+
+    // Function to load and display channels based on the selected category
+    function loadChannels(category) {
+        const channelListElement = document.getElementById('channelItems');
+        channelListElement.innerHTML = ''; // Clear previous list
+
+        const channels = categories[category];
+        channels.forEach(channel => {
+            const channelItem = document.createElement('li');
+            channelItem.className = 'channel-item';
+            channelItem.innerHTML = `<strong>${channel.title}</strong><br><em>${channel.description}</em>`;
+            channelItem.onclick = () => playChannel(channel.location);
+            channelItem.appendChild(createFavoriteButton(channel)); // Add favorite button
+            channelListElement.appendChild(channelItem);
+        });
+    }
+
+    // Function to create a favorite button for each channel
+    function createFavoriteButton(channel) {
+        const favoriteButton = document.createElement('button');
+        favoriteButton.textContent = '❤️';
+        favoriteButton.style.marginLeft = '10px';
+        favoriteButton.onclick = (e) => {
+            e.stopPropagation(); // Prevent triggering the playChannel
+            addFavorite(channel);
+        };
+        return favoriteButton;
+    }
+
+    // Function to add a channel to favorites
+    function addFavorite(channel) {
+        if (!favorites.includes(channel)) {
+            favorites.push(channel);
+            renderFavorites(); // Update the favorites section
+        }
+    }
+
+    // Function to render the favorites section
+    function renderFavorites() {
+        const favoritesListElement = document.getElementById('favoritesList');
+        favoritesListElement.innerHTML = ''; // Clear previous favorites
+
+        favorites.forEach(channel => {
+            const favoritesItem = document.createElement('li');
+            favoritesItem.className = 'favorites-item';
+            favoritesItem.innerHTML = `<strong>${channel.title}</strong><br><em>${channel.description}</em>`;
+            favoritesItem.onclick = () => playChannel(channel.location);
+            favoritesListElement.appendChild(favoritesItem);
+        });
+    }
+
+    // Function to play the selected channel in the video player
+    function playChannel(url) {
+        const videoPlayerContainer = document.getElementById('videoPlayerContainer');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoSource = document.getElementById('videoSource');
+
+        // Update the source and play the video
+        videoSource.src = url;
+        videoPlayer.load();
+        videoPlayer.play();
+
+        // Show the video player when a channel is clicked
+        videoPlayerContainer.style.display = 'block'; // Display the player
+    }
+
+    // Search functionality for IPTV channels
+    function searchChannels() {
+        const query = document.getElementById('searchBar').value.toLowerCase();
+        const filteredChannels = [];
+
+        // Filter channels across all categories
+        for (const category in categories) {
+            categories[category].forEach(channel => {
+                if (channel.title.toLowerCase().includes(query) || channel.description.toLowerCase().includes(query)) {
+                    filteredChannels.push(channel);
+                }
+            });
+        }
+
+        // Display the search results in the channel list
+        const channelListElement = document.getElementById('channelItems');
+        channelListElement.innerHTML = '';
+        filteredChannels.forEach(channel => {
+            const channelItem = document.createElement('li');
+            channelItem.className = 'channel-item';
+            channelItem.innerHTML = `<strong>${channel.title}</strong><br><em>${channel.description}</em>`;
+            channelItem.onclick = () => playChannel(channel.location);
+            channelItem.appendChild(createFavoriteButton(channel)); // Add favorite button
+            channelListElement.appendChild(channelItem);
+        });
+    }
+
+    // Initialize the page by loading XSPF file
+    loadXSPF();
+</script>
+
+</body>
+</html>

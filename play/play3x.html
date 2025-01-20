@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Channel Listings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ... existing styles ... */
+        
+        /* New button for selecting device to push video */
+        #deviceSelector {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .device-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .device-btn:hover {
+            background-color: #45a049;
+        }
+
+        .device-list {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .device-item {
+            padding: 8px;
+            margin: 5px;
+            background-color: #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .device-item:hover {
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>IPTV Channel Listings</h1>
+    <input type="text" id="searchBar" class="search-bar" placeholder="Search IPTV Channels..." onkeyup="searchChannels()">
+</header>
+
+<!-- New Device Selector -->
+<div id="deviceSelector">
+    <button class="device-btn" onclick="toggleDeviceList()">Select Remote Device</button>
+    <div id="deviceList" class="device-list">
+        <!-- List of devices will be dynamically loaded here -->
+    </div>
+</div>
+
+<!-- Fixed Video Player -->
+<div class="video-player" id="videoPlayerContainer">
+    <video id="videoPlayer" controls>
+        <source id="videoSource" src="" type="application/x-mpegURL">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    let remoteDevices = ["Device 1", "Device 2", "Device 3"]; // Placeholder list of remote devices
+
+    // Toggle the display of remote device list
+    function toggleDeviceList() {
+        const deviceList = document.getElementById('deviceList');
+        deviceList.style.display = deviceList.style.display === 'none' ? 'block' : 'none';
+        
+        // Populate the device list if it's not populated
+        if (deviceList.innerHTML === '') {
+            remoteDevices.forEach(device => {
+                const deviceItem = document.createElement('div');
+                deviceItem.className = 'device-item';
+                deviceItem.textContent = device;
+                deviceItem.onclick = () => selectDevice(device);
+                deviceList.appendChild(deviceItem);
+            });
+        }
+    }
+
+    // Function to select a device and push the video
+    function selectDevice(device) {
+        console.log(`Selected device: ${device}`);
+        // Implement the logic to push video to the selected device (e.g., via Cast SDK or WebRTC)
+        alert(`Video will be pushed to: ${device}`);
+        
+        // Close the device list
+        toggleDeviceList();
+
+        // Play the video on the remote device (simulating this for now)
+        pushVideoToRemoteDevice(device);
+    }
+
+    // Function to push the video to the selected remote device
+    function pushVideoToRemoteDevice(device) {
+        const videoSource = document.getElementById('videoSource').src;
+        console.log(`Pushing video to ${device}: ${videoSource}`);
+        
+        // You can integrate with device APIs like Chromecast or WebRTC here
+        // This is just a placeholder for the actual functionality
+        
+        // Simulating playback on the remote device (for now, just log it)
+        alert(`Video is now playing on ${device}`);
+    }
+
+    // Function to play the video on the current device (default behavior)
+    function playChannel(url) {
+        const videoPlayerContainer = document.getElementById('videoPlayerContainer');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoSource = document.getElementById('videoSource');
+
+        // Update the source and play the video
+        videoSource.src = url;
+        videoPlayer.load();
+        videoPlayer.play();
+
+        // Show the video player when a channel is clicked
+        videoPlayerContainer.style.display = 'block'; // Display the player
+    }
+
+    // Placeholder function for the remote control, to toggle between current and remote playback
+    function togglePlayOnRemote() {
+        const isPlayingOnRemote = false; // Track whether the video is currently playing remotely
+        // Implement your logic here to toggle playback on remote device
+    }
+</script>
+
+</body>
+</html>
