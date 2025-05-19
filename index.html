@@ -1,1 +1,67 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple IPTV Player</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        #channels { max-height: 300px; overflow-y: auto; margin-bottom: 10px; }
+        .channel { cursor: pointer; padding: 5px; border-bottom: 1px solid #ccc; }
+        .channel:hover { background-color: #f0f0f0; }
+        video { width: 100%; height: auto; background: black; }
+    </style>
+</head>
+<body>
+
+<h2>Simple IPTV Player</h2>
+<input type="text" id="url" placeholder="Enter M3U playlist URL" style="width: 80%;">
+<button onclick="loadPlaylist()">Load</button>
+
+<div id="channels"></div>
+<video id="player" controls autoplay></video>
+
+<script>
+    async function loadPlaylist() {
+        const url = document.getElementById('url').value;
+        const channelsDiv = document.getElementById('channels');
+        channelsDiv.innerHTML = 'Loading...';
+
+        try {
+            const res = await fetch(url);
+            const text = await res.text();
+
+            const lines = text.split('\n');
+            const channels = [];
+            for (let i = 0; i < lines.length; i++) {
+                if (lines[i].startsWith('#EXTINF')) {
+                    const title = lines[i].split(',')[1] || 'Untitled';
+                    const streamUrl = lines[i + 1];
+                    if (streamUrl && !streamUrl.startsWith('#')) {
+                        channels.push({ title, url: streamUrl });
+                    }
+                }
+            }
+
+            channelsDiv.innerHTML = '';
+            channels.forEach(ch => {
+                const div = document.createElement('div');
+                div.className = 'channel';
+                div.textContent = ch.title;
+                div.onclick = () => playChannel(ch.url);
+                channelsDiv.appendChild(div);
+            });
+        } catch (err) {
+            channelsDiv.innerHTML = 'Failed to load playlist.';
+            console.error(err);
+        }
+    }
+
+    function playChannel(url) {
+        const player = document.getElementById('player');
+        player.src = url;
+        player.play();
+    }
+</script>
+
+</body>
+</html>
