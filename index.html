@@ -4,31 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M3U Player</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
-        body { font-family: sans-serif; display: flex; margin: 0; padding: 0; background-color: #f0f0f0; }
-        #sidebar { width: 250px; background-color: #333; color: white; padding: 15px; overflow-y: auto; height: 100vh; box-shadow: 2px 0 5px rgba(0,0,0,0.2); }
-        #main-content { flex-grow: 1; padding: 20px; }
-        #search-container { margin-bottom: 20px; }
-        #search-input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-        #player-container { margin-bottom: 20px; background-color: black; }
-        video { width: 100%; height: auto; display: block; }
-        .category-section h3 { margin-top: 20px; color: #555; }
-        .channel-list { list-style: none; padding: 0; }
-        .channel-item { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee; cursor: pointer; transition: background-color 0.2s; }
-        .channel-item:hover { background-color: #e9e9e9; }
-        .channel-item img { width: 50px; height: 50px; object-fit: cover; margin-right: 10px; border-radius: 5px; }
-        .channel-item .channel-name { font-weight: bold; }
-        .channel-item .channel-genre { font-size: 0.9em; color: #777; }
-        .favorite-btn { margin-left: auto; background: none; border: none; font-size: 1.2em; cursor: pointer; color: #ccc; }
-        .favorite-btn.active { color: gold; }
-
-        /* Sidebar channel item for selected state */
-        #sidebar .channel-item {
-            color: white;
-            border-bottom: 1px solid #555;
+        /* General body and layout styling */
+        body {
+            font-family: sans-serif;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow: hidden; /* Prevent body scroll */
         }
-        #sidebar .channel-item:hover {
-            background-color: #555;
+
+        /* Sidebar styling */
+        #sidebar {
+            width: 250px;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            overflow-y: auto; /* Enable scrolling for channel list */
+            height: 100vh; /* Full viewport height */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+            flex-shrink: 0; /* Prevent sidebar from shrinking */
+        }
+
+        /* Search input styling */
+        #search-container {
+            margin-bottom: 20px;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        /* Main content area styling */
+        #main-content {
+            flex-grow: 1; /* Allows main content to take remaining space */
+            padding: 20px;
+            overflow-y: auto; /* Enable scrolling for main content if needed */
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Video player container styling */
+        #player-container {
+            margin-bottom: 20px;
+            background-color: black;
+            border-radius: 8px;
+            overflow: hidden; /* Ensures video respects border-radius */
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Category section styling */
+        .category-section h3 {
+            margin-top: 20px;
+            color: #ccc; /* Lighter color for sidebar headings */
+            padding-bottom: 5px;
+            border-bottom: 1px solid #555;
+            font-size: 1.1em;
+        }
+
+        /* Channel list styling */
+        .channel-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Individual channel item styling */
+        .channel-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #555; /* Darker border for sidebar items */
+            cursor: pointer;
+            transition: background-color 0.2s;
+            color: white; /* Text color for sidebar items */
+        }
+
+        .channel-item:last-child {
+            border-bottom: none; /* No border for the last item */
+        }
+
+        .channel-item:hover {
+            background-color: #555; /* Hover effect */
+        }
+
+        .channel-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 5px;
+            flex-shrink: 0; /* Prevent image from shrinking */
+        }
+
+        .channel-item .channel-info {
+            flex-grow: 1; /* Allows info to take available space */
+            overflow: hidden; /* Hide overflow text */
+        }
+
+        .channel-item .channel-name {
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /* Add ellipsis for long names */
+        }
+
+        .channel-item .channel-genre {
+            font-size: 0.8em;
+            color: #aaa;
+        }
+
+        /* Favorite button styling */
+        .favorite-btn {
+            margin-left: auto;
+            background: none;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            color: #ccc; /* Default star color */
+            padding: 5px;
+            line-height: 1; /* Align star icon better */
+        }
+
+        .favorite-btn.active {
+            color: gold; /* Active (favorited) star color */
+        }
+
+        /* Now Playing Info */
+        #current-channel-info {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #current-channel-info h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        #current-channel-info p {
+            margin: 0;
+            color: #666;
         }
     </style>
 </head>
@@ -39,6 +167,10 @@
             <input type="text" id="search-input" placeholder="Search channels...">
         </div>
         <div id="category-sections">
+            <div id="favorites-category" class="category-section">
+                <h3>Favorites</h3>
+                <ul class="channel-list"></ul>
+            </div>
             <div id="live-tv-category" class="category-section">
                 <h3>Live TV</h3>
                 <ul class="channel-list"></ul>
@@ -51,15 +183,11 @@
                 <h3>Series</h3>
                 <ul class="channel-list"></ul>
             </div>
-            <div id="favorites-category" class="category-section">
-                <h3>Favorites</h3>
-                <ul class="channel-list"></ul>
-            </div>
             </div>
     </div>
 
     <div id="main-content">
-        <h1>M3U Player</h1>
+        <h1>XSPF Player</h1>
         <div id="player-container">
             <video id="video-player" controls autoplay></video>
         </div>
@@ -71,251 +199,277 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('search-input');
-    const videoPlayer = document.getElementById('video-player');
-    const currentChannelNameElem = document.getElementById('current-channel-name');
-    const currentChannelGenreElem = document.getElementById('current-channel-genre');
+            const searchInput = document.getElementById('search-input');
+            const videoPlayer = document.getElementById('video-player');
+            const currentChannelNameElem = document.getElementById('current-channel-name');
+            const currentChannelGenreElem = document.getElementById('current-channel-genre');
 
-    const categories = {
-        'Live TV': document.querySelector('#live-tv-category .channel-list'),
-        'Movies': document.querySelector('#movies-category .channel-list'),
-        'Series': document.querySelector('#series-category .channel-list'),
-        'Favorites': document.querySelector('#favorites-category .channel-list'),
-        // Add more categories as needed
-    };
+            // Map category names to their respective list elements
+            const categories = {
+                'Live TV': document.querySelector('#live-tv-category .channel-list'),
+                'Movies': document.querySelector('#movies-category .channel-list'),
+                'Series': document.querySelector('#series-category .channel-list'),
+                'Favorites': document.querySelector('#favorites-category .channel-list'),
+                // Add more categories as needed for your XSPF data
+            };
 
-    let allChannels = []; // Store all parsed channels
+            let allChannels = []; // Stores all parsed channels
+            let hls; // Global variable for HLS.js instance
 
-    // Function to fetch and parse the M3U file
-    async function loadM3U() {
-        // IMPORTANT: Replace this with an authorized/local M3U URL or fetch from a controlled source.
-        // I am using a placeholder for illustration. Directly using the provided URL is NOT recommended.
-        const m3uUrl = 'http://1tv41.icu:8080/get.php?username=3022207888&password=leonmatthews60@gmail.com&type=m3u'; // <<< Replace with your actual M3U URL
+            // --- Playlist Loading and Parsing ---
+            // This URL should point to your XSPF file hosted on GitHub Pages
+            const playlistUrl = './my_playlist.xspf'; // <<<<<<< REMEMBER TO UPDATE THIS PATH
 
-        try {
-            const response = await fetch(m3uUrl);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+            async function loadPlaylist() {
+                try {
+                    console.log('Attempting to fetch XSPF from:', playlistUrl);
+                    const response = await fetch(playlistUrl);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+                    }
+                    const text = await response.text();
+                    parseXSPF(text);
+                } catch (error) {
+                    console.error('Error fetching XSPF:', error);
+                    alert('Could not load playlist. Please ensure "my_playlist.xspf" is in your repository and correctly formatted.');
+                }
             }
-            const text = await response.text();
-            parseM3U(text);
-        } catch (error) {
-            console.error('Error fetching M3U:', error);
-            alert('Could not load playlist. Please check the M3U URL.');
-        }
-    }
 
-    // Function to parse the M3U content based on your specific format
-    function parseM3U(m3uText) {
-        const lines = m3uText.split('\n').map(line => line.trim()).filter(line => line.length > 0);
-        let currentChannel = {};
-        allChannels = []; // Reset for new parse
+            function parseXSPF(xmlText) {
+                allChannels = []; // Reset for new parse
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, "text/xml");
 
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i];
+                // Check for XML parsing errors
+                const errorNode = xmlDoc.querySelector('parsererror');
+                if (errorNode) {
+                    console.error('Error parsing XSPF:', errorNode.textContent);
+                    alert('Error parsing playlist XML. Please check the XSPF file format.');
+                    return;
+                }
 
-            if (line.startsWith('N.')) {
-                currentChannel.name = line.substring(2).trim();
-            } else if (line.startsWith('G.')) {
-                currentChannel.genre = line.substring(2).trim();
-            } else if (line.startsWith('S.')) {
-                currentChannel.url = line.substring(2).trim();
-                // At this point, we have a complete channel entry
-                // Assuming you have an image mapping or can derive it
-                currentChannel.image = getImageForChannel(currentChannel.name); // You need to implement this
-                allChannels.push({ ...currentChannel }); // Add a copy to allChannels
-                currentChannel = {}; // Reset for the next channel
+                const tracks = xmlDoc.querySelectorAll('trackList track');
+
+                tracks.forEach(track => {
+                    const channel = {};
+                    channel.url = track.querySelector('location')?.textContent || '';
+                    channel.name = track.querySelector('title')?.textContent || 'Untitled Channel';
+
+                    // --- IMPORTANT: Adjust these selectors to match your XSPF's exact structure ---
+                    // For genre, assuming an <extension application="http://example.com/genre"><genre>...</genre></extension>
+                    const genreExtension = track.querySelector('extension[application="http://example.com/genre"]');
+                    channel.genre = genreExtension?.querySelector('genre')?.textContent || 'General'; // Default to 'General'
+
+                    // For image, assuming an <extension application="http://example.com/image"><image>...</image></extension>
+                    const imageExtension = track.querySelector('extension[application="http://example.com/image"]');
+                    channel.image = imageExtension?.querySelector('image')?.textContent || 'https://via.placeholder.com/50x50?text=NoImg'; // Default placeholder
+
+                    // Fallback for image if still not found (e.g., if XSPF is missing it)
+                    if (channel.image === 'https://via.placeholder.com/50x50?text=NoImg') {
+                        channel.image = `https://via.placeholder.com/50x50?text=${encodeURIComponent(channel.name.charAt(0))}`;
+                    }
+
+                    if (channel.url && channel.name) { // Only add if essential data is present
+                        allChannels.push(channel);
+                    }
+                });
+
+                displayChannels(allChannels);
+                loadFavorites(); // Load favorites after channels are parsed
             }
-            // Ignore other lines like #EXTTVL, #EXTFINFN, etc. for channel parsing
-        }
-        displayChannels(allChannels);
-        loadFavorites(); // Load favorites after channels are parsed
-    }
 
-    // Helper function to get an image URL for a channel
-    // This is crucial and needs your implementation.
-    // Options:
-    // 1. Have a separate JSON mapping: { "Channel Name": "image_url.png" }
-    // 2. Derive from channel name (e.g., "channel_name_logo.png")
-    // 3. (Less common in M3U) M3U itself has a 'tvg-logo' attribute in #EXTINF line
-    function getImageForChannel(channelName) {
-        // Placeholder: In a real scenario, you'd have a mapping or logic here
-        // For demonstration, let's just return a generic placeholder
-        return 'https://via.placeholder.com/50x50?text=' + encodeURIComponent(channelName.charAt(0));
-    }
+            // --- Channel Display and Interaction ---
 
+            function displayChannels(channelsToDisplay) {
+                // Clear existing lists in all categories
+                Object.values(categories).forEach(list => list.innerHTML = '');
 
-    // Function to display channels in their respective categories
-    function displayChannels(channelsToDisplay) {
-        // Clear existing lists
-        Object.values(categories).forEach(list => list.innerHTML = '');
+                // Populate 'Favorites' first if they are in the filtered list
+                const favoritedChannels = channelsToDisplay.filter(channel => isFavorite(channel.name));
+                favoritedChannels.forEach(channel => {
+                    const li = createChannelListItem(channel);
+                    categories['Favorites'].appendChild(li);
+                });
 
-        channelsToDisplay.forEach(channel => {
-            const li = document.createElement('li');
-            li.className = 'channel-item';
-            li.dataset.url = channel.url;
-            li.dataset.name = channel.name;
-            li.dataset.genre = channel.genre;
+                // Then populate other categories, avoiding duplicates for favorites
+                const nonFavoritedChannels = channelsToDisplay.filter(channel => !isFavorite(channel.name));
+                nonFavoritedChannels.forEach(channel => {
+                    const li = createChannelListItem(channel);
+                    // Dynamically assign to existing or 'Live TV' category if genre is new
+                    const targetCategoryList = categories[channel.genre];
+                    if (targetCategoryList) {
+                        targetCategoryList.appendChild(li);
+                    } else {
+                        // If genre is not a pre-defined category, you could add it to a 'Misc' or 'Live TV'
+                        // Or dynamically create a new category section. For now, add to 'Live TV'.
+                        categories['Live TV'].appendChild(li);
+                    }
+                });
+                updateFavoriteButtons(); // Update star color on initial display
+            }
 
-            li.innerHTML = `
-                <img src="${channel.image}" alt="${channel.name} logo">
-                <div class="channel-info">
-                    <div class="channel-name">${channel.name}</div>
-                    <div class="channel-genre">${channel.genre}</div>
-                </div>
-                <button class="favorite-btn" data-name="${channel.name}">⭐</button>
-            `;
+            function createChannelListItem(channel) {
+                const li = document.createElement('li');
+                li.className = 'channel-item';
+                li.dataset.url = channel.url;
+                li.dataset.name = channel.name;
+                li.dataset.genre = channel.genre;
 
-            li.addEventListener('click', (event) => {
-                // Prevent playing if favorite button was clicked
-                if (!event.target.classList.contains('favorite-btn')) {
-                    playChannel(channel.url, channel.name, channel.genre);
+                li.innerHTML = `
+                    <img src="${channel.image}" alt="${channel.name} logo">
+                    <div class="channel-info">
+                        <div class="channel-name">${channel.name}</div>
+                        <div class="channel-genre">${channel.genre}</div>
+                    </div>
+                    <button class="favorite-btn" data-name="${channel.name}">⭐</button>
+                `;
+
+                // Event listener for playing the channel
+                li.addEventListener('click', (event) => {
+                    // Prevent playing if the favorite button was clicked (its own handler will fire)
+                    if (!event.target.classList.contains('favorite-btn')) {
+                        playChannel(channel.url, channel.name, channel.genre);
+                    }
+                });
+
+                // Event listener for favorite button
+                const favBtn = li.querySelector('.favorite-btn');
+                favBtn.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Stop click event from bubbling to parent li
+                    toggleFavorite(channel.name);
+                    filterChannels(searchInput.value); // Re-render to update favorite section
+                });
+                return li;
+            }
+
+            // --- Video Playback with HLS.js ---
+
+            function playChannel(url, name, genre) {
+                currentChannelNameElem.textContent = name;
+                currentChannelGenreElem.textContent = genre;
+                console.log(`Attempting to play: ${name} (${url})`);
+
+                // Destroy any existing hls.js instance to prevent conflicts
+                if (hls) {
+                    hls.destroy();
+                    console.log('Previous HLS instance destroyed.');
+                }
+
+                // Check if HLS.js is supported by the browser
+                if (Hls.isSupported()) {
+                    hls = new Hls();
+                    console.log('HLS.js is supported. Loading stream...');
+                    hls.loadSource(url);
+                    hls.attachMedia(videoPlayer);
+                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                        videoPlayer.play();
+                        console.log('HLS manifest parsed. Video playing.');
+                    });
+                    hls.on(Hls.Events.ERROR, function (event, data) {
+                        console.error('HLS.js error:', data);
+                        if (data.fatal) {
+                            switch(data.type) {
+                                case Hls.ErrorTypes.NETWORK_ERROR:
+                                    console.error('Fatal network error, trying to recover HLS stream...');
+                                    hls.recoverMediaError();
+                                    break;
+                                case Hls.ErrorTypes.MEDIA_ERROR:
+                                    console.error('Fatal media error, trying to recover HLS stream...');
+                                    hls.recoverMediaError();
+                                    break;
+                                default:
+                                    console.error('Unrecoverable HLS.js error. Destroying HLS instance.');
+                                    hls.destroy();
+                                    alert(`Error playing channel: ${data.details}. Check console for more info.`);
+                                    videoPlayer.src = ''; // Clear player source
+                                    break;
+                            }
+                        }
+                    });
+                } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                    // Fallback for browsers with native HLS support (e.g., Safari)
+                    console.log('Native HLS support detected (Safari). Playing directly...');
+                    videoPlayer.src = url;
+                    videoPlayer.load();
+                    videoPlayer.play();
+                } else {
+                    // If neither HLS.js nor native HLS is supported
+                    console.error('This browser does not support HLS playback.');
+                    alert('Your browser does not support HLS playback. Please try a different browser (like Chrome, Firefox, Edge, Safari) or ensure hls.js is loaded correctly.');
+                    videoPlayer.src = ''; // Clear player source
+                }
+            }
+
+            // --- Search Functionality ---
+
+            searchInput.addEventListener('input', (event) => {
+                filterChannels(event.target.value);
+            });
+
+            function filterChannels(searchTerm) {
+                const lowerCaseSearchTerm = searchTerm.toLowerCase();
+                const filteredChannels = allChannels.filter(channel =>
+                    channel.name.toLowerCase().includes(lowerCaseSearchTerm) ||
+                    channel.genre.toLowerCase().includes(lowerCaseSearchTerm)
+                );
+                displayChannels(filteredChannels); // Re-display filtered channels
+            }
+
+            // --- Dynamic Personalization (Favorites using sessionStorage) ---
+            // sessionStorage is used here for "expires once the user exits" behavior.
+            // Use localStorage if you want persistence across browser sessions.
+            const FAVORITES_KEY = 'm3u_player_favorites';
+            let favorites = new Set(); // Using a Set for efficient lookup of favorite channel names
+
+            function loadFavorites() {
+                const storedFavorites = sessionStorage.getItem(FAVORITES_KEY);
+                if (storedFavorites) {
+                    favorites = new Set(JSON.parse(storedFavorites));
+                }
+                filterChannels(searchInput.value); // Re-render to show favorites after initial load
+            }
+
+            function saveFavorites() {
+                sessionStorage.setItem(FAVORITES_KEY, JSON.stringify(Array.from(favorites)));
+            }
+
+            function isFavorite(channelName) {
+                return favorites.has(channelName);
+            }
+
+            function toggleFavorite(channelName) {
+                if (isFavorite(channelName)) {
+                    favorites.delete(channelName);
+                } else {
+                    favorites.add(channelName);
+                }
+                saveFavorites();
+                updateFavoriteButtons(); // Update all star icons
+            }
+
+            function updateFavoriteButtons() {
+                document.querySelectorAll('.favorite-btn').forEach(button => {
+                    const channelName = button.dataset.name;
+                    if (isFavorite(channelName)) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            }
+
+            // --- Initial Load ---
+            // Call loadPlaylist to start the process of fetching and displaying channels
+            loadPlaylist();
+
+            // Cleanup hls.js instance when the page is unloaded (good practice)
+            window.addEventListener('beforeunload', () => {
+                if (hls) {
+                    hls.destroy();
+                    console.log('HLS instance destroyed on page unload.');
                 }
             });
-
-            // Handle favorite button click
-            const favBtn = li.querySelector('.favorite-btn');
-            favBtn.addEventListener('click', (event) => {
-                event.stopPropagation(); // Prevent li click event from firing
-                toggleFavorite(channel.name);
-                favBtn.classList.toggle('active', isFavorite(channel.name)); // Update star color
-                filterChannels(searchInput.value); // Re-render to update favorite section
-            });
-
-            // Assign to category
-            const targetCategoryList = categories[channel.genre] || categories['Live TV']; // Default to Live TV if genre not found
-            if (targetCategoryList) {
-                targetCategoryList.appendChild(li);
-            }
         });
-        updateFavoriteButtons(); // Update star color on initial display
-    }
-
-    // Function to play a channel
-    function playChannel(url, name, genre) {
-        videoPlayer.src = url;
-        videoPlayer.load();
-        videoPlayer.play();
-        currentChannelNameElem.textContent = name;
-        currentChannelGenreElem.textContent = genre;
-        console.log(`Playing: ${name} (${url})`);
-    }
-
-    // Search functionality
-    searchInput.addEventListener('input', (event) => {
-        filterChannels(event.target.value);
-    });
-
-    function filterChannels(searchTerm) {
-        const lowerCaseSearchTerm = searchTerm.toLowerCase();
-        const filteredChannels = allChannels.filter(channel =>
-            channel.name.toLowerCase().includes(lowerCaseSearchTerm) ||
-            channel.genre.toLowerCase().includes(lowerCaseSearchTerm)
-        );
-
-        // Separate out favorites for display
-        const favoritedChannels = filteredChannels.filter(channel => isFavorite(channel.name));
-        const nonFavoritedChannels = filteredChannels.filter(channel => !isFavorite(channel.name));
-
-        // Clear and re-populate only the visible categories
-        Object.values(categories).forEach(list => list.innerHTML = '');
-
-        // Populate favorites
-        favoritedChannels.forEach(channel => {
-            const li = createChannelListItem(channel);
-            categories['Favorites'].appendChild(li);
-        });
-
-        // Populate other categories
-        nonFavoritedChannels.forEach(channel => {
-            const li = createChannelListItem(channel);
-            const targetCategoryList = categories[channel.genre] || categories['Live TV'];
-            if (targetCategoryList) {
-                targetCategoryList.appendChild(li);
-            }
-        });
-        updateFavoriteButtons();
-    }
-
-    // Helper to create channel list item with event listeners
-    function createChannelListItem(channel) {
-        const li = document.createElement('li');
-        li.className = 'channel-item';
-        li.dataset.url = channel.url;
-        li.dataset.name = channel.name;
-        li.dataset.genre = channel.genre;
-
-        li.innerHTML = `
-            <img src="${channel.image}" alt="${channel.name} logo">
-            <div class="channel-info">
-                <div class="channel-name">${channel.name}</div>
-                <div class="channel-genre">${channel.genre}</div>
-            </div>
-            <button class="favorite-btn" data-name="${channel.name}">⭐</button>
-        `;
-
-        li.addEventListener('click', (event) => {
-            if (!event.target.classList.contains('favorite-btn')) {
-                playChannel(channel.url, channel.name, channel.genre);
-            }
-        });
-
-        const favBtn = li.querySelector('.favorite-btn');
-        favBtn.addEventListener('click', (event) => {
-            event.stopPropagation();
-            toggleFavorite(channel.name);
-            filterChannels(searchInput.value); // Re-render to update favorite section
-        });
-        return li;
-    }
-
-
-    // Dynamic Personalization (Favorites using sessionStorage)
-    // sessionStorage is used here for "expires once the user exits" behavior.
-    // Use localStorage if you want persistence across browser sessions.
-    const FAVORITES_KEY = 'm3u_player_favorites';
-    let favorites = new Set(); // Using a Set for efficient lookup
-
-    function loadFavorites() {
-        const storedFavorites = sessionStorage.getItem(FAVORITES_KEY);
-        if (storedFavorites) {
-            favorites = new Set(JSON.parse(storedFavorites));
-        }
-        filterChannels(searchInput.value); // Re-render to show favorites
-    }
-
-    function saveFavorites() {
-        sessionStorage.setItem(FAVORITES_KEY, JSON.stringify(Array.from(favorites)));
-    }
-
-    function isFavorite(channelName) {
-        return favorites.has(channelName);
-    }
-
-    function toggleFavorite(channelName) {
-        if (isFavorite(channelName)) {
-            favorites.delete(channelName);
-        } else {
-            favorites.add(channelName);
-        }
-        saveFavorites();
-        updateFavoriteButtons(); // Update all buttons
-    }
-
-    function updateFavoriteButtons() {
-        document.querySelectorAll('.favorite-btn').forEach(button => {
-            const channelName = button.dataset.name;
-            if (isFavorite(channelName)) {
-                button.classList.add('active');
-            } else {
-                button.classList.remove('active');
-            }
-        });
-    }
-
-    // Initial load
-    loadM3U();
-});
     </script>
 </body>
 </html>
